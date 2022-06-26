@@ -1,15 +1,243 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-</head>
-<body>
-    <h1>MasiMami</h1>
-    
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Weather</title>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</head>
+	<body>
+		<div class="content">
+			<div class="header">
+				What city do you want to know the weather in?
+				<form id="search-form">
+					<input 
+						type="text" 
+						placeholder="Search for a city"
+						autocomplete="off"
+						autofocus="on"
+						id="site-search">
+					<input type="submit" value="Search" id="submit">
+					<button>Current</button>
+				</form>
+			</div>
+			<hr>
+			<div class="weather-day">
+				<div class="day">
+					<h4>
+						Today
+					</h4>
+					<p id="today">22 may</p>
+					<div class="info-day">
+						<div class="half-day">
+							<img src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
+						</div>
+						<div class="half-day">
+							<h3 class="weatherToday" id="weatherToday">+19</h3>
+							<h4 class="night-degree">+10</h4>
+						</div>
+					</div>
+				</div>
+				<div class="day">
+					<h4>
+						Tommorow
+					</h4>
+					<p id="tommorow">23 may</p>
+					<div class="info-day">
+						<div class="half-day">
+							<img src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
+						</div>
+						<div class="half-day">
+							<h3 class="weatherTommorow">+19</h3>
+							<h4 class="night-degree">+10</h4>
+						</div>
+					</div>
+				</div>
+				<div class="day">
+					<h4 id="dayAfterTommorow">
+						Monday
+					</h4>
+					<p id="dataAfterTommorow">24 may</p>
+					<div class="info-day">
+						<div class="half-day">
+							<img src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
+						</div>
+						<div class="half-day">
+							<h3>+19</h3>
+							<h4 class="night-degree">+10</h4>
+						</div>
+					</div>
+				</div>
+				<div class="day">
+					<h4>
+						Tuesday
+					</h4>
+					<p>25 may</p>
+					<div class="info-day">
+						<div class="half-day">
+							<img src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
+						</div>
+						<div class="half-day">
+							<h3>+19</h3>
+							<h4 class="night-degree">+10</h4>
+						</div>
+					</div>
+				</div>
+				<div class="day">
+					<h4>
+						Wednesday
+					</h4>
+					<p>26 may</p>
+					<div class="info-day">
+						<div class="half-day">
+							<img src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
+						</div>
+						<div class="half-day">
+							<h3>+19</h3>
+							<h4 class="night-degree">+10</h4>
+						</div>
+					</div>
+				</div>
+				<div class="day">
+					<h4>
+						Thursday
+					</h4>
+					<p>27 may</p>
+					<div class="info-day">
+						<div class="half-day">
+							<img src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
+						</div>
+						<div class="half-day">
+							<h3>+19</h3>
+							<h4 class="night-degree">+10</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="basic-info">
+				<div class="today-info">
+					<h2>City</h2>
+					<h1 class="weatherToday">+19</h1>
+					<h3 id="time-now">Monday 15:00</h3>
+					<h4>Chance of precipitation: 1% <br>Humidity: 63%<br>Wind:26 km/h</h4>
+				</div>
+				<div class="table">
+					<table border="1">
+						<tr>
+							<th>Time</th>
+							<th>00:00</th>
+							<th>03:00</th>
+							<th>06:00</th>
+							<th>09:00</th>
+							<th>12:00</th>
+							<th>15:00</th>
+							<th>18:00</th>
+							<th>21:00</th>
+						</tr>
+						<tr>
+							<th>Cloudiness</th>
+							<th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
+							<th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
+							<th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
+							<th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
+							<th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
+							<th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
+							<th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
+							<th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
+						</tr>
+						<tr>
+							<th>Temperature</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+						</tr>
+						<tr>
+							<th>Feels</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+						</tr>
+						<tr>
+							<th>Probability of <br>precipitation, %</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+						</tr>
+						<tr>
+							<th>Precipitation. mm</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+						</tr>
+						<tr>
+							<th>Pressure, mm</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+						</tr>
+						<tr>
+							<th>Humidity, %</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+						</tr>
+						<tr>
+							<th>Wind, m/s</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+						</tr>
+						<tr>
+							<th>UV index</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+							<th>date</th>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<script src="index.js"></script>
+	</body>
 </html>

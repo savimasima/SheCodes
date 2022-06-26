@@ -1,0 +1,86 @@
+body {
+}
+img {
+  width: 50px;
+}
+hr {
+  width: 100%;
+  color: #000000;
+  margin: 0 0 20px 0;
+  border: 1px;
+  border-style: solid;
+  border-color: #000000;
+}
+button {
+  margin-left: 10px;
+}
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 35px;
+  color: #666666;
+}
+h3 {
+  margin: 0;
+  font-size: 25px;
+}
+h4 {
+  font-size: 20px;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+th {
+  padding: 5px;
+}
+.content {
+  display: block;
+  margin: 0 auto;
+  width: 998px;
+  border-style: solid;
+  border-color: #000000;
+}
+.header {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+}
+form {
+  display: flex;
+  flex-direction: row;
+}
+#site-search {
+  margin-left: 10px;
+  width: 540px;
+}
+#submit {
+  margin-left: 23px;
+  padding: 0 10px;
+}
+.weather-day {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.day {
+  border-style: solid;
+  border-color: #000000;
+  padding: 0 10px;
+}
+.night-degree {
+  color: #666666;
+}
+.info-day {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10px;
+}
+.half-day {
+  padding: 0 10px;
+}
+.basic-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+}
