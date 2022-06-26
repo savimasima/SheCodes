@@ -12,7 +12,8 @@ hr {
   border-color: #000000;
 }
 button {
-  margin-left: 10px;
+  margin-left: 20px;
+  padding: 0 15px;
 }
 h1 {
   font-size: 50px;
@@ -54,8 +55,8 @@ form {
   width: 540px;
 }
 #submit {
-  margin-left: 23px;
-  padding: 0 10px;
+  margin-left: 20px;
+  padding: 0 15px;
 }
 .weather-day {
   display: flex;
