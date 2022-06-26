@@ -58,6 +58,9 @@ form {
   margin-left: 20px;
   padding: 0 15px;
 }
+.github {
+    color: #000000;
+}
 .weather-day {
   display: flex;
   flex-direction: row;
