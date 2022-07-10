@@ -13,11 +13,11 @@
 				What city do you want to know <br>the weather in?
 				<form id="search-form">
 					<input 
-						type="text" 
+						type="search" 
 						placeholder="Search for a city"
 						autocomplete="off"
 						autofocus="on"
-						id="site-search">
+						id="city-input">
 					<input type="submit" value="Search" id="submit">
 					<button>Current</button>
 				</form>
@@ -31,7 +31,7 @@
 					<p id="today">22 may</p>
 					<div class="info-day">
 						<div class="half-day">
-							<img src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
+							<img class="iconTop" id="iconToday" src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
 						</div>
 						<div class="half-day">
 							<h3 class="weatherToday" id="weatherToday">+19</h3>
@@ -46,7 +46,7 @@
 					<p id="tommorow">23 may</p>
 					<div class="info-day">
 						<div class="half-day">
-							<img src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
+							<img class="iconTop" src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
 						</div>
 						<div class="half-day">
 							<h3 class="weatherTommorow">+19</h3>
@@ -61,7 +61,7 @@
 					<p id="dataAfterTommorow">24 may</p>
 					<div class="info-day">
 						<div class="half-day">
-							<img src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
+							<img class="iconTop" src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
 						</div>
 						<div class="half-day">
 							<h3>+19</h3>
@@ -76,7 +76,7 @@
 					<p>25 may</p>
 					<div class="info-day">
 						<div class="half-day">
-							<img src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
+							<img class="iconTop" src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
 						</div>
 						<div class="half-day">
 							<h3>+19</h3>
@@ -91,7 +91,7 @@
 					<p>26 may</p>
 					<div class="info-day">
 						<div class="half-day">
-							<img src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
+							<img class="iconTop" src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
 						</div>
 						<div class="half-day">
 							<h3>+19</h3>
@@ -106,7 +106,7 @@
 					<p>27 may</p>
 					<div class="info-day">
 						<div class="half-day">
-							<img src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
+							<img class="iconTop" src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
 						</div>
 						<div class="half-day">
 							<h3>+19</h3>
@@ -117,10 +117,17 @@
 			</div>
 			<div class="basic-info">
 				<div class="today-info">
-					<h2>City</h2>
-					<h1 class="weatherToday">+19</h1>
-					<h3 id="time-now">Monday 15:00</h3>
-					<h4>Chance of precipitation: 1% <br>Humidity: 63%<br>Wind:26 km/h</h4>
+					<h2 id="city">City</h2>
+					<div class="weather-temperature">
+						<img src="" alt="Clear" id="icon" class="icon">
+						<strong id="temperature">+19</strong>
+						<span class="units"
+						><a href="#" id="celsius-link" class="active">°C</a> |
+						<a href="#" id="fahrenheit-link">°F</a></span>
+					</div>
+					<h3 id="date">Monday 15:00</h3>
+					<h4 id="description"></h4>
+					<h4>Chance of precipitation: 1% <br>Humidity: <span id="humidity">...</span>%<br>Wind: <span id="wind">....</span> km/h</h4>
                     <a href="https://github.com/savimasima/SheCodes" class="github">GitHub</a>
 				</div>
 				<div class="table">
@@ -138,14 +145,14 @@
 						</tr>
 						<tr>
 							<th>Cloudiness</th>
-							<th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
-							<th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
-							<th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
-							<th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
-							<th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
-							<th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
-							<th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
-							<th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
+							<th><img class="iconBottom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
+							<th><img class="iconBottom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
+							<th><img class="iconBottom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
+							<th><img class="iconBottom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
+							<th><img class="iconBottom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
+							<th><img class="iconBottom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
+							<th><img class="iconBottom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
+							<th><img class="iconBottom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
 						</tr>
 						<tr>
 							<th>Temperature</th>

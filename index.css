@@ -1,8 +1,5 @@
 body {
 }
-img {
-  width: 50px;
-}
 hr {
   width: 100%;
   color: #000000;
@@ -21,10 +18,14 @@ h1 {
 h2 {
   font-size: 35px;
   color: #666666;
+  margin: 15px;
 }
 h3 {
   margin: 0;
   font-size: 25px;
+}
+h4:first-letter {
+  text-transform: capitalize;
 }
 h4 {
   font-size: 20px;
@@ -33,6 +34,9 @@ h4 {
 }
 th {
   padding: 5px;
+}
+strong {
+  font-size: 70px;
 }
 .content {
   display: block;
@@ -46,11 +50,17 @@ th {
   display: flex;
   flex-direction: row;
 }
+.iconTop {
+  width: 50px;
+}
+.iconBottom {
+  width: 45px;
+}
 form {
   display: flex;
   flex-direction: row;
 }
-#site-search {
+#city-input {
   margin-left: 10px;
   width: 540px;
 }
@@ -87,4 +97,14 @@ form {
   flex-direction: row;
   justify-content: space-between;
   padding: 30px;
+}
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+}
+.weather-temperature .active {
+  color: #000000;
+  cursor: default;
+  text-decoration: none;
 }
