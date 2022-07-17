@@ -18,7 +18,7 @@ h1 {
 h2 {
   font-size: 35px;
   color: #666666;
-  margin: 15px;
+  margin: 0;
 }
 h3 {
   margin: 0;
@@ -33,10 +33,13 @@ h4 {
   margin-top: 10px;
 }
 th {
-  padding: 5px;
+  padding: 5px 15px;
+  font-size: 20px;
 }
 strong {
-  font-size: 70px;
+  font-size: 50px;
+  padding-top: 22px;
+  padding-left: 20px;
 }
 .content {
   display: block;
@@ -98,10 +101,19 @@ form {
   justify-content: space-between;
   padding: 30px;
 }
+.cloudiness {
+  width: 82px;
+}
+.cloudiness:first-letter {
+  text-transform: capitalize;
+}
+.weather-temperature {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .weather-temperature .units {
-  position: relative;
-  font-size: 16px;
-  top: -34px;
+  padding-top: 30px;
 }
 .weather-temperature .active {
   color: #000000;

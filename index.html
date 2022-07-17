@@ -23,97 +23,7 @@
 				</form>
 			</div>
 			<hr>
-			<div class="weather-day">
-				<div class="day">
-					<h4>
-						Today
-					</h4>
-					<p id="today">22 may</p>
-					<div class="info-day">
-						<div class="half-day">
-							<img class="iconTop" id="iconToday" src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
-						</div>
-						<div class="half-day">
-							<h3 class="weatherToday" id="weatherToday">+19</h3>
-							<h4 class="night-degree">+10</h4>
-						</div>
-					</div>
-				</div>
-				<div class="day">
-					<h4>
-						Tommorow
-					</h4>
-					<p id="tommorow">23 may</p>
-					<div class="info-day">
-						<div class="half-day">
-							<img class="iconTop" src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
-						</div>
-						<div class="half-day">
-							<h3 class="weatherTommorow">+19</h3>
-							<h4 class="night-degree">+10</h4>
-						</div>
-					</div>
-				</div>
-				<div class="day">
-					<h4 id="dayAfterTommorow">
-						Monday
-					</h4>
-					<p id="dataAfterTommorow">24 may</p>
-					<div class="info-day">
-						<div class="half-day">
-							<img class="iconTop" src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
-						</div>
-						<div class="half-day">
-							<h3>+19</h3>
-							<h4 class="night-degree">+10</h4>
-						</div>
-					</div>
-				</div>
-				<div class="day">
-					<h4>
-						Tuesday
-					</h4>
-					<p>25 may</p>
-					<div class="info-day">
-						<div class="half-day">
-							<img class="iconTop" src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
-						</div>
-						<div class="half-day">
-							<h3>+19</h3>
-							<h4 class="night-degree">+10</h4>
-						</div>
-					</div>
-				</div>
-				<div class="day">
-					<h4>
-						Wednesday
-					</h4>
-					<p>26 may</p>
-					<div class="info-day">
-						<div class="half-day">
-							<img class="iconTop" src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
-						</div>
-						<div class="half-day">
-							<h3>+19</h3>
-							<h4 class="night-degree">+10</h4>
-						</div>
-					</div>
-				</div>
-				<div class="day">
-					<h4>
-						Thursday
-					</h4>
-					<p>27 may</p>
-					<div class="info-day">
-						<div class="half-day">
-							<img class="iconTop" src="https://cdn-icons-png.flaticon.com/512/4224/4224883.png">
-						</div>
-						<div class="half-day">
-							<h3>+19</h3>
-							<h4 class="night-degree">+10</h4>
-						</div>
-					</div>
-				</div>
+			<div id="forecast">
 			</div>
 			<div class="basic-info">
 				<div class="today-info">
@@ -122,12 +32,13 @@
 						<img src="" alt="Clear" id="icon" class="icon">
 						<strong id="temperature">+19</strong>
 						<span class="units"
-						><a href="#" id="celsius-link" class="active">°C</a> |
-						<a href="#" id="fahrenheit-link">°F</a></span>
+						><a href="#" id="celsius-link" class="active">°C</a> 
+						<!--|
+						<a href="#" id="fahrenheit-link">°F</a></span> -->
 					</div>
 					<h3 id="date">Monday 15:00</h3>
 					<h4 id="description"></h4>
-					<h4>Chance of precipitation: 1% <br>Humidity: <span id="humidity">...</span>%<br>Wind: <span id="wind">....</span> km/h</h4>
+					<h4>Humidity: <span id="humidity">...</span>%<br>Wind: <span id="wind">....</span> km/h</h4>
                     <a href="https://github.com/savimasima/SheCodes" class="github">GitHub</a>
 				</div>
 				<div class="table">
@@ -135,112 +46,51 @@
 						<tr>
 							<th>Time</th>
 							<th>00:00</th>
-							<th>03:00</th>
 							<th>06:00</th>
-							<th>09:00</th>
 							<th>12:00</th>
-							<th>15:00</th>
 							<th>18:00</th>
-							<th>21:00</th>
 						</tr>
-						<tr>
+						<tr id="trIcon">
 							<th>Cloudiness</th>
-							<th><img class="iconBottom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
-							<th><img class="iconBottom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
-							<th><img class="iconBottom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
-							<th><img class="iconBottom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
-							<th><img class="iconBottom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
-							<th><img class="iconBottom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
-							<th><img class="iconBottom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
-							<th><img class="iconBottom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAK2QrdNfrn5pP78eUOVVlqm7LqK-3JMnpIQ&usqp=CAU"></th>
+							<th class="cloudiness" id="cloud00"></th>
+							<th class="cloudiness" id="cloud06"></th>
+							<th class="cloudiness" id="cloud12"></th>
+							<th class="cloudiness" id="cloud18"></th>
 						</tr>
 						<tr>
 							<th>Temperature</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
+							<th> <span id="temp00"> </span>°</th>
+							<th> <span id="temp06"> </span>°</th>
+							<th> <span id="temp12"> </span>°</th>
+							<th> <span id="temp18"> </span>°</th>
 						</tr>
 						<tr>
 							<th>Feels</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
+							<th> <span id="feel00"> </span>°</th>
+							<th> <span id="feel06"> </span>°</th>
+							<th> <span id="feel12"> </span>°</th>
+							<th> <span id="feel18"> </span>°</th>
 						</tr>
 						<tr>
-							<th>Probability of <br>precipitation, %</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
+							<th>Pressure, hPa</th>
+							<th id="press00"></th>
+							<th id="press06"></th>
+							<th id="press12"></th>
+							<th id="press18"></th>
 						</tr>
 						<tr>
-							<th>Precipitation. mm</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
+							<th>Humidity</th>
+							<th><span id="humidity00"></span>%</th>
+							<th><span id="humidity06"></span>%</th>
+							<th><span id="humidity12"></span>%</th>
+							<th><span id="humidity18"></span>%</th>
 						</tr>
 						<tr>
-							<th>Pressure, mm</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-						</tr>
-						<tr>
-							<th>Humidity, %</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-						</tr>
-						<tr>
-							<th>Wind, m/s</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-						</tr>
-						<tr>
-							<th>UV index</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
-							<th>date</th>
+							<th>Wind</th>
+							<th><span id="wind00"></span> m/s</th>
+							<th><span id="wind06"></span> m/s</th>
+							<th><span id="wind12"></span> m/s</th>
+							<th><span id="wind18"></span> m/s</th>
 						</tr>
 					</table>
 				</div>
